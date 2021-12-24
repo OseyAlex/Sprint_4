@@ -20,12 +20,14 @@ public class ValidateNewAccountTests {
     @Parameterized.Parameters
     public static Object[][] getTestData() {
         return new Object[][]{
-                {"Джонни", false},
                 {"Джонни Депп", true},
+                {"Джонни", false},
                 {"Джонни ", false},
                 {" Джонни", false},
-                {"Джонни Депп Викторович", false},
                 {"Джонни Депп Депп", false},
+                {"Чичигинарова Наталья", false},
+                {"Сю", false},
+                {"", false},
                 {null, false}
         };
     }
